@@ -1,0 +1,7 @@
+touch:ファイルの作成
+→touch test.txt→txtファイルが作成される
+
+ファイルの編集　nano
+保存はCtlx→Y→エンター
+
+cat：ファイルの中身を表示する
