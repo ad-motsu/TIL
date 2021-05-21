@@ -1,36 +1,47 @@
 ## Kubernetes(k8s)とは
+コンテナを管理するもの。複数台のコンテナのNW分散や管理等やコンテナのグルーピングや監視などをするツール。
 
-GKEをつかってコンテナ化されたアプリをデプロイする
-
+## 設定する
 ・デフォルトのタイムゾーンの設定
+```
 gcloud config set compute/zone us-central1-a
+```
 
-・クラスタを作成する。[CLUSTER-NAME]は自分の好きな名前に変更する
-gcloud container clusters create [CLUSTER-NAME]
+### クラスタを作成する
 ＊クラスタとは：１つのクラスタマシンと複数のノードから構成
+```
+/*クラスタを作成する。[CLUSTER-NAME]は自分の好きな名前に変更する*/
+gcloud container clusters create [CLUSTER-NAME]
 
-・クラスタを認証する
+/*認証*/
 gcloud container clusters get-credentials [CLUSTER-NAME]
+```
 
-
-・hello-app コンテナ イメージから hello-server という新しい Deployment を作成する
+### コンテナ イメージから Deployment を作成
+```
+/*コンテナイメージhello-app からhello-serverを作成*/
 kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1.0
 
-・Kubernetes Service（Kubernetes リソースの一種として、アプリケーションを外部トラフィックに公開できるようにする）を作成する
+/*外部トラフィックに公開する設定（Kubernetes Service）*/
 kubectl expose deployment hello-server --type=LoadBalancer --port 8080
 
---port にはコンテナで公開するポートを指定します。
-type="LoadBalancer" を渡すことで、コンテナの Compute Engine ロードバランサが作成されます
-
-・hello-server Service について確認
+/*hello-server Service について確認*/
 kubectl get service
 
-・ブラウザで確認する
-http://34.122.160.180:8080
-＊IPアドレスは先程のコードを打ち込んだ時に出力されるものに置き換える
+/*
+--port ：コンテナで公開するポートを指定
+type="LoadBalancer" を渡すことで、コンテナの Compute Engine ロードバランサが作成される
+*/
 
-・クラスタを削除する
+/*ブラウザで確認する*/
+http://34.122.160.180:8080
+/*＊IPアドレスは先程のコードを打ち込んだ時に出力されるものに置き換える*/
+```
+
+### クラスタを削除する
+```
 gcloud container clusters delete [CLUSTER-NAME]
+```
 
 ■
 ・ゾーンとリージョンの設定
