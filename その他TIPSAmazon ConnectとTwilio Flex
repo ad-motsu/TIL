@@ -1,22 +1,37 @@
-amazon lexはalexaとおなじ
-v2のコンソールが日本語化されている
-→ただし一部とつながらない
+■雑多なまとめ
+Amazon ConnectとTwilio Flexは機能がほぼ同じ
+→Amazon Lex v2を使うならTwilioと連携させるほうが良さそう
 
-音声エンジンは男性と女性の２人（mizuki takumi）
+TwilioのチャットのUIは以下にすべてソースコードがのっている
+ただし、日本語化についてはスライド資料の中の1行を追加することが必要
+https://github.com/mobilebiz/flex-webchat-ja
 
+LexとTwilioのハンズオン的なことを含め、ぜんぶここに載ってる
+https://qiita.com/mobilebiz/items/55c9a4d7009d1ba2a3ec
+
+
+以下メモ
+■Amazon Lex：ハンズオン
+Alexaから「A」を抜いたのが名前の由来（エンジンも同じ）
+初期リリースのv1と日本語対応したv2が存在する
+→Amazon Connectとの接続はv2では未対応
+
+音声エンジンは男性と女性の２人（mizuki, takumi）
+
+以下ハンズオンのメモ
 音声はインプットを待つ時間が長いので、時間は長めに設定をしておく
-
+↓
 sentiment analysis→苦情などのログを残してくれるサービス
 COPRA→個人情報や勝手な発言を注文として受けない
 confidence score theshold→どのぐらいいい加減な言葉でも受け取るか
-
-ウタランス（発話）
+↓
+utterance（発話）
 どのインテントで発動するのか？という設定値→10個以上設定がおすすめ
-
+↓
 slots
 渡す値（牛丼ならサイズ等）
 →promptという値を入れることで質問を追加できる
-
+↓
 ビルドするとテストが可能になる
 
 QA
@@ -30,14 +45,13 @@ v1→AWSの特定のサービスと連携したい場合に使う（Amazon Conne
 Publish→API経由で外部連携できる
 
 
-Twilio
-APIを提供するので（裏側）知名度がそこまで高くない
-コミュニケーションAPI
-閉鎖的なコミュニケーションになる電話は好きじゃない
+■Twilio紹介
+APIを提供するので、知名度がそこまで高くない
+いわゆるコミュニケーションAPIを提供している
 
 Twilio Flex
 フルカスタマイズが可能なコンタクトセンター（カスタマイズをすることが前提、変化をさせていくサービス）
-→Amazon Connectとほぼ同じ
+→「Amazon Connectとほぼ同じ」
 
 Twilio studio
 D&Dでフローが作成可能。
@@ -48,9 +62,7 @@ Task Router
 Flex UI
 電話等他ツールを使ってやり取りが可能になるツール
 
-
-Lexとの連携
-Lambdaと同じサーバレスの仕組み
+Lexとの連携はLambdaと同じサーバレスの仕組み
 
 chatの画面は下記
 https://github.com/mobilebiz/flex-webchat-ja
@@ -80,6 +92,7 @@ Flex insightなら可能
 
 チャットの内容がそれぞれのサービスに保存される場合、会話内容を暗号化することは可能ですか？
 →ユーザー側で指定する方法はない（ボイスとかはある）、AWS側はS3に保管するのでKMSと難読化が可能
+
 
 
 #EXTM3U
