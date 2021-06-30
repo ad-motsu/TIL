@@ -81,15 +81,4 @@ letはどこにも紐付いていないので値が参照されない
 
 letとvarの違い
 https://www.javascripttutorial.net/es6/difference-between-var-and-let/
-一旦中止
-
-
-Javascript　Primer
-https://jsprimer.net/intro/
-
-コメントの記述
-```
-// 1行
-/* */複数行
-<!-- --> HTMLライクなコメント
-```
+何でもありのvarとはことなり、letは制限があるのが特徴。詳しくは上記にて  
