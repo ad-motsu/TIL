@@ -1,5 +1,5 @@
 ## 参考資料
-https://jsprimer.net/basic/comments/
+https://jsprimer.net/basic/operator/
   
 ## 基本的な文法
 ### コメントアウト
@@ -61,7 +61,54 @@ https://jsprimer.net/basic/comments/
 ・プリミティブ型
 →真偽値、数値など基本的な値の型。作成したらその値自体は変更できない特性を持つ（イミュータブル）
 JSでは文字列もこちらに分類される
+Boolean, Number, String , BigInt, undefined, null
 
 ・オブジェクト
 →複数のプリミティブ、プリミティブ以外は全部こっち。作成後も値自体を変更できる特性（ミュータブル）
 値を参照するため、参照型。
+配列、関数、正規表現、Dateなど
+
+使用している変数はtypeof演算子で調べることが可能
+
+新しいオブジェクトの作成方法
+```
+const obj = {}; //空のオブジェクトを生成
+```
+const obj = {
+    "key": "value"};
+→keyはプロパティ
+参照するには以下の２つの方法がある
+// ドット記法
+console.log(obj.key); // => "value"
+// ブラケット記法
+console.log(obj["key"]); // => "value"
+
+
+
+## リテラル
+数値や文字列などのデータ型の値を直接記述出来るものとして定義
+→""で囲うやつのこと。''でも同じだが、文字として使う場合は\'のようにエスケープが必要。新しい
+
+配列リテラル
+```
+const emptyArray = []; // 空の配列を作成
+const array = [1, 2, 3]; // 値を持った配列を作成
+```
+
+配列の参照方法は以下
+```
+const array = ["index:0", "index:1", "index:2"];
+// 0番目の要素を参照
+console.log(array[0]); // => "index:0"
+// 1番目の要素を参照
+console.log(array[1]); // => "index:1"
+```
+
+正規表現リテラル
+基本的な書き方は//で囲んで書く
+```
+const numberRegExp = /\d+/; // 1文字以上の数字にマッチする正規表現
+// `numberRegExp`の正規表現が文字列"123"にマッチするかをテストする
+console.log(numberRegExp.test("123")); // => true
+実行
+```
