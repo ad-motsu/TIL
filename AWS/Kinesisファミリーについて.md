@@ -4,6 +4,7 @@
 |  シャード  |  ストリーム内の一意に識別されたデータレコードのシーケンス  |
 |  シーケンス番号  |  シャード内のパーティションキーごとに一意な識別子  |
 |  パーティションキー  |  トリーム内のデータをシャード単位でグループ化させるもの  |
+  
 参考：[Amazon Kinesis Data Streams の用語と概念](https://docs.aws.amazon.com/ja_jp/streams/latest/dev/key-concepts.html)
   
 ## 種類とざっくりとした使いみち
