@@ -6,14 +6,18 @@
   
 ## VScode
 ### 日本語化
-view→Coomand Paletteで開いて「display」と入力し、「Configure Display Language」を選択
-Install additional langagesから日本語を選択してindtallを押し、再起動する
-
+view→Coomand Paletteで開いて「display」と入力し、「Configure Display Language」を選択  
+Install additional langagesから日本語を選択してindtallを押し、再起動する  
+  
 ### Enter押下後、勝手に変換されないようにする
-ファイル→ユーザー設定→設定を押下
-テキストエディタ→候補から「Accept Suggestion On Enter」をoffにする
-
+1. ファイル→ユーザー設定→設定を押下
+2. テキストエディタ→候補から「Accept Suggestion On Enter」をoffにする
+  
 ### 拡張機能のインストール
  - Draw.io
  - Prettier - Code formatter
  - VSNotes
+  
+## 開発環境
+### Anaconda
+対象のページからIndivisual版を導入する
