@@ -12,7 +12,8 @@
 動画や音声データのストリーミングを行うもの。
   
 ### Data Streams
-データのストリーミングを行うもの。低レイテンシ（1秒以下）
+データのストリーミングを行うもの。低レイテンシ（1秒以下）。  
+JSONファイルでのやり取りで行われる。
   
 ### Data Firehose
 ストリーミングデータのロードを行うもの
@@ -22,3 +23,6 @@ SQLのデータ分析を行うもの
   
 ## Data StreamsとData Firehoseの違い
 https://dev.classmethod.jp/articles/difference-between-kinesis-streams-and-kinesis-firehose/
+
+## 連携について
+主にLambdaを使用する。
