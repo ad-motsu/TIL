@@ -25,4 +25,4 @@ SQLのデータ分析を行うもの
 https://dev.classmethod.jp/articles/difference-between-kinesis-streams-and-kinesis-firehose/
 
 ## 連携について
-主にLambdaを使用する。
+主にLambdaを使用する。Amazon Connectからの接続の場合、フローに組み込むことで可能になる。
