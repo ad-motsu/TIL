@@ -26,3 +26,5 @@ https://dev.classmethod.jp/articles/difference-between-kinesis-streams-and-kines
 
 ## 連携について
 主にLambdaを使用する。Amazon Connectからの接続の場合、フローに組み込むことで可能になる。
+→エラーを返す場合、イベントソースマッピングを使用するためデータの有効期限が切れるまでリトライが続く
+Kinesis とEC2(もしくはコンテナ)はKinesis APIを使用することで実装可能になる
