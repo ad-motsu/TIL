@@ -1,0 +1,12 @@
+Discoveryについてのまとめ
+ACCとは
+ITOMの機能でリリースされたもの一つで、エージェントを導入することで自動で端末情報などをSNOWへと送信する
+
+必要なプラグイン一覧
+https://docs.servicenow.com/en-US/bundle/sandiego-it-operations-management/page/product/agent-client-collector/concept/acc-installation.html
+
+ACCのインストール方法
+https://docs.servicenow.com/bundle/sandiego-it-operations-management/page/product/agent-client-collector/task/acc-configure-web-server.html
+
+導入方法は以下参照
+https://docs.servicenow.com/bundle/sandiego-it-operations-management/page/product/discovery/task/t_ActivateTheDiscoveryPlugin.html
