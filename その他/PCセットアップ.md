@@ -21,3 +21,5 @@ Install additional langagesから日本語を選択してindtallを押し、再�
 ## 開発環境
 ### Anaconda
 対象のページからIndivisual版を導入する
+
+メモ追加
